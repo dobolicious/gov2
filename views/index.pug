@@ -1,0 +1,62 @@
+extends layout
+
+block content
+  header
+  
+  main(role='main')
+    section.jumbotron.text-center(style='background-image: url("/beach_new.jpg");')
+      .container
+        h1.jumbotron-heading 
+          a(href="/")
+            img(width='480', height='75', src='Banner.png')
+        p.lead(style="color: black;")
+          | Don't look for a job, search for an adventure!
+        a(href="/search")
+          button.btn.btn-lg.btn-warning(type='button', style="margin-right: 1rem;margin-left: 1rem;margin-top: 2rem;") Take Me Anywhere!
+    .container(style="margin-top: 2.5rem;")
+      .row
+        .col-lg-6
+          img(src='user.png', data-holder-rendered='true', style="width: 100%;")
+        .col-lg-6
+          div(style="margin-top: 5rem;")
+            h3(style="margin-top: 3rem;") What's in it for the you?
+            p(style="line-height: 2.5;") Thinking about making a career or life change? Take Me Anywhere can provide new opportunities that benefit  Australia's rural communities. Search for new careers based on your skills, regions you would like to work, or just support the community.
+
+    .container(style="margin-top: 2.5rem;")
+      .row
+        .col-lg-6
+          div(style="margin-top: 5rem;")
+            h3 What's in it for employers?
+            p(style="line-height: 2.5;") Do you need some new skills in your workforce? Do you want to attract more people into your rural community? Then Take Me Anywhere can help your team find the best person for the best job.
+
+        .col-lg-6
+          img(src='boss.png', data-holder-rendered='true', style="width: 100%;")
+    
+    .container(style="margin-top: 2.5rem;")
+      .row      
+        .col-lg-6
+          img(src='features.png', data-holder-rendered='true', style="width: 100%;")
+        .col-lg-6
+          h3(style="margin-top: 3rem;") Key features
+          p Instead of searching for jobs based on industry or role types, there are 3 different search criteria: "Skills", "Your Adventure" and "I don't care".
+          h5 Skills
+          p Select from a diverse range of skills that aren’t industry specific e.g. communication, physical activity, cooking, teamwork, administration.
+          h5 Your Adventure
+          p Choose from a list of regions (based on current demand provided by either live data sets or information provided by councils).
+          h5 I don't care
+          p Not sure what you want, but certain you want a change? This option connects you to jobs that need people fast, no matter what the location. 
+  
+    section.jumbotron.text-center(style="background-color: white;")
+      .container
+        h1.jumbotron-heading
+          h1(style="color: black;") Community 
+          img(width='70%', src='community.png')
+        p(style="color: black;padding-bottom: 5rem;")
+          | At Take Me Anywhere, we’re all about supporting the community. Our vision is to connect people who need a change in their lives with rural communities and growing business who could use a more diverse range of skills. Our future plans involve alternative retirement options for seniors, branching out to both national and international communities, as well as building awareness and connections between Queensland communities.
+
+
+       
+  footer.text-muted
+    .container
+    p.float-right  
+     

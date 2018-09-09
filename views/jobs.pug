@@ -1,0 +1,53 @@
+extends layout
+
+block content
+  header
+  
+  main(role='main')
+    section.jumbotron.text-center(style='background-image: url("/beach_new.jpg");')
+      .container
+        h1.jumbotron-heading 
+        a(href="/")
+          img(width='480', height='75', src='Banner.png')
+        p.lead(style="color: black;")
+          | Don't look for a job, search for an adventure!
+    
+  form 
+    .album.py-5.bg-light
+      .container
+        table.table
+            thead
+            tr
+                th(scope='col') Job Title
+                th(scope='col') Location
+                th(scope='col') Company
+                th(scope='col') Skills
+                th(scope='col') Apply
+
+            tbody
+            each val,index in jobs 
+                tr
+                    td
+                        h5 #{val.Title}
+                    td
+                        p #{val.Loc}
+                    td 
+                        p #{val.Company}
+                    td
+                        
+                        each skill,i in val.Skills 
+                            span #{skill} #{(i < val.Skills.length - 1) ? ', ' : ''}
+                    td 
+                        a.btn.btn-success(href='http://www.seek.com.au', role='button') Apply now!
+
+                       
+
+
+          
+
+
+
+  footer.text-muted
+    .container
+    p.float-right  
+     

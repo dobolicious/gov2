@@ -1,0 +1,63 @@
+extends layout
+
+block content
+  header
+  
+  main(role='main')
+    section.jumbotron.text-center(style='background-image: url("/beach_new.jpg");')
+      .container
+        h1.jumbotron-heading 
+        a(href="/")
+          img(width='480', height='75', src='Banner.png')
+        p.lead(style="color: black;")
+          | Don't look for a job, search for an adventure!
+
+    form 
+      .album.py-5
+        .container
+          h3(style="text-align: center;") Congrats!
+          p(style="text-align: center;") Congrats on making your first step in entering the tourism industry!
+          .row
+            img(src='welcome.png', style='height: 70%; width: 70%;margin: auto; display: block;')
+            .col-lg-8.card
+                .row
+                    .col-md-6(style="padding-left: 0px;") 
+                        img.card-img-top(data-src='holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail', alt='Thumbnail [100%x225]', style='height: 225px; width: 100%; display: block;', src='/hospitality.png', data-holder-rendered='true')
+                        h3(style="padding: 1rem;") Your Skills
+                        .card-body
+                            each val,index in skills 
+                                .custom-control.custom-checkbox(style="padding-bottom: 1rem;")
+                                  input.custom-control-input(type='checkbox', id="customCheck" + index)
+                                  label.custom-control-label(for='customCheck' + index) #{val}
+                                  br 
+                            .d-flex.justify-content-between.align-items-center
+                    .col-md-6(style="padding-right: 0px;padding-left: 0px;") 
+                        img.card-img-top(data-src='holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail', alt='Thumbnail [100%x225]', src='http://wondergirl.com.au/blogs/wp-content/uploads/2016/02/adventure.jpg', data-holder-rendered='true', style='height: 225px; width: 100%; display: block;')
+                        h3(style="padding: 1rem;") Your Adventure
+                        .card-body
+                            each val, index in locations 
+                                .custom-control.custom-checkbox(style="padding-bottom: 1rem;")
+                                    input.custom-control-input(type='checkbox', id="locationCheck" + index)
+                                    label.custom-control-label(for='locationCheck' + index) #{val}
+                                    br                  
+                        .d-flex.justify-content-between.align-items-center
+                    a(href="/jobs")
+                      button.btn.btn-sm.btn-outline-secondary(type='button', style="margin-right: 1rem;margin-left: 2rem;margin-bottom: 2rem;color: #449523;border-color: #449523;") Take Me There!
+             
+            .col-lg-4
+              a(href="/jobs", style="text-decoration: none;")
+                .card.mb-4.shadow-sm(style="cursor: pointer;height: 100%;")
+                  img.card-img-top(data-src='holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail', alt='Thumbnail [100%x225]', src='idontcare.jpg', data-holder-rendered='true', style='height: 225px; width: 100%; display: block;')
+                  .card-body
+                    p(style="color: black; line-height: 2rem;") Need a change now? Don’t care where you go? Want to help out communities that could really use your help? Then we’ll show you the jobs out there that need you the most! 
+
+                  .card-body
+                    button.btn.btn-sm.btn-outline-secondary(type='button', style="position:absolute; bottom: 2rem;color: #449523;border-color: #449523;text-align: left;")
+                      span I don't care...
+                      br
+                      span take me anywhere!
+       
+  footer.text-muted
+    .container
+    p.float-right  
+     
